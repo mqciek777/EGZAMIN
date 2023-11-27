@@ -1,0 +1,4 @@
+1: SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM osoby LIMIT 30;
+2: SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa FROM osoby, hobby WHERE osoby.Hobby_id = hobby.id AND osoby.id=10;
+3: SELECT ROUND(AVG(rok_urodzenia)) AS 'sredni wiek', MIN(rok_urodzenia) AS 'najnizszy', MAX(rok_urodzenia) AS 'najwyzszy' FROM osoby;
+4: UPDATE osoby SET opis='gaming' WHERE Hobby_id=4;
