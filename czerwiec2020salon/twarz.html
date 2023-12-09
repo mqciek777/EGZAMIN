@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi kosmetyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+    <section id="lewy_1">
+        <h2>W ofercie</h2>
+
+        <ul>
+            <a href="twarz.html"><li>Zabiegi na twarz</a>
+                <ol>
+                    <li>Piling</li>
+                    <li>Maska</li>
+                    <li>Regulacja brwi</li>
+                </ol>
+            <li>Masaż</li>
+            <li>Diety oczyszczające</li>
+        </ul>
+
+        <a href="index.html">Do strony głównej</a>
+    </section>
+    
+    
+    <section id="prawy_1">
+        <h1>Salon Kosmetyczny</h1>
+    </section>
+
+
+
+    <section id="prawy_2">
+       <h2>Sprawdź cenę swojej wizyty</h2>
+       
+       <input type="checkbox" id="piling"> Piling <br>
+       <input type="checkbox" id="maska"> Maska <br>
+       <input type="checkbox" id="masaz"> Masaż twarzy <br>
+       <input type="checkbox" id="regulacja"> Regulacja brwi <br>
+       <input type="button" value="Sprawdź cenę" onclick="suma()"> <br>
+       
+       <p id="text" style="display:none">Cena zabiegów:</p>
+       
+
+
+       <script>
+
+            function suma() {
+                var check_piling = document.getElementById("piling");
+                var check_maska = document.getElementById("maska");
+                var check_masaz = document.getElementById("masaz");
+                var check_regulacja = document.getElementById("regulacja");
+                
+                var suma = 0;
+
+                if (check_piling.checked == true) {
+                    var cena_piling = 45;
+                    suma += cena_piling;
+                }
+
+                if (check_maska.checked == true) {
+                    var cena_maska = 30;
+                    suma += cena_maska;
+                }
+
+                if (check_masaz.checked == true) {
+                    var cena_masaz = 20;
+                    suma += cena_masaz;
+                }
+
+                if (check_regulacja.checked == true) {
+                    var cena_regulacja = 5;
+                    suma += cena_regulacja;
+                }
+
+                document.getElementById("text").style.display = "block";
+                document.getElementById("text").innerHTML = "Cena zabiegów: " + suma;
+  
+            }
+        
+       </script>
+
+    </section>
+
+    
+    <section id="lewy_2">
+        <img src="obraz1.jpg" alt="Kosmetyczka">
+    </section>
+
+
+    <footer>
+        <p>Autor: 0000222333</p>
+    </footer>
+</body>
+
+</html>
