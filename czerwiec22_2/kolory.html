@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomocnik CSS</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <div id="container">
+
+        <header id="1">
+            <h1>Pomocnik CSS</h1>
+        </header>
+
+
+        <header id="2">
+            <ul>
+                <li> <a href="kolory.html">Kolory</a> </li>
+                <li> <a href="czcionki.html">Czcionki</a> </li>
+                <li> <a href="style.html">Style CSS</a> </li>
+                <li> <a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a> </li>  
+            </ul>
+        </header>
+
+
+
+        <main>
+            <h2>Podaj składową H koloru w kodzie HSL</h2>
+            <p>0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+            <img src="./kolory.jpg" alt="Przestrzeń barw HSL"> <br>
+
+
+                <input type="number" id="wartosc" min="0" max="360" placeholder="0-360">
+                <input type="submit" value="Generuj paletę" onclick="kolor()"> <br>
+
+                    <table id="tabela">
+                        <tr>
+                            <td colspan="4">Kolor główny</td>
+                        </tr>
+                        <tr>
+                            <td>Kolor 2</td>
+                            <td>Kolor 3</td>
+                            <td>Kolor 4</td>
+                            <td>Kolor 5</td>
+                        </tr>
+                    </table>
+
+
+                    <script>
+                        function kolor() {
+                            let h = document.getElementById("wartosc").value;
+                            const tabela = document.getElementById("tabela");
+                            const l = "50%";
+
+                                //pierwszy wiersz
+                                    tabela.rows[0].cells[0].style.backgroundColor = 'hsl(' + h + ', 100%, ' + l + ')';
+                        
+                                //drugi wiersz
+                                    tabela.rows[1].cells[0].style.backgroundColor = 'hsl(' + h + ', 80%, ' + l + ')';
+                                    tabela.rows[1].cells[1].style.backgroundColor = 'hsl(' + h + ', 60%, ' + l + ')';
+                                    tabela.rows[1].cells[2].style.backgroundColor = 'hsl(' + h + ', 40%, ' + l + ')';
+                                    tabela.rows[1].cells[3].style.backgroundColor = 'hsl(' + h + ', 20%, ' + l + ')';
+                                                    
+                        }
+                    
+
+                    </script>
+        </main>
+
+
+        <footer>
+            <p>Autor: 12331431</p>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
