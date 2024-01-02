@@ -1,0 +1,11 @@
+1. SELECT nazwa FROM towary WHERE promocja=1;
+2. SELECT cena FROM towary WHERE id=10;
+3. SELECT dostawcy.id, dostawcy.nazwa, COUNT(towary.nazwa) AS liczba_towarow 
+FROM dostawcy, towary 
+WHERE dostawcy.id = towary.idDostawcy 
+GROUP BY dostawcy.id, dostawcy.nazwa;
+4. ALTER TABLE dostawcy ADD informacje TEXT NOT NULL;
+
+
+
+

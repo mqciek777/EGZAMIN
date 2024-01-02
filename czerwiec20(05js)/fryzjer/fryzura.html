@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <section id="wynik">
+        <h3>Dziś promocja na strzyżenie włosów</h3>
+        <label>
+            <input type="radio" name="dlugosc" id="krotkie">Krótkie<br>
+            <input type="radio" name="dlugosc" id="srednie">Średnie<br>
+            <input type="radio" name="dlugosc" id="poldlugie">Półdługie<br>
+            <input type="radio" name="dlugosc" id="dlugie">Długie<br>
+        </label>
+    
+        <input type="submit" value="Odkryj promocję" onclick="oblicz()">
+    
+        <p id="suma" style="display: none"></p>
+    </section>
+    
+    <script>
+        function oblicz() {
+            var krotkie_check = document.getElementById("krotkie");
+            var srednie_check = document.getElementById("srednie");
+            var poldlugie_check = document.getElementById("poldlugie");
+            var dlugie_check = document.getElementById("dlugie");
+            var cena = 0;
+    
+            if (krotkie_check.checked == true) {
+                cena += 25;
+            }
+            if (srednie_check.checked == true) {
+                cena += 30;
+            }
+            if (poldlugie_check.checked == true) {
+                cena += 40;
+            }
+            if (dlugie_check.checked == true) {
+                cena += 50;
+            }
+    
+            document.getElementById("suma").style.display = "block";
+            document.getElementById("suma").innerHTML = "Cena strzyżenia: " + cena;
+        }
+    </script>
+    
+</body>
+</html>
