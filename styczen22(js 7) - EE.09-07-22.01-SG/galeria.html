@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+
+
+    <main>
+        <img src="lanzarotte.jpg" alt="galeria" id="0">
+    </main>
+
+
+    <section id="lewy">
+        <h3>Przeglądaj zdjęcia</h3>
+
+        <img src="lanzarotte.jpg" alt="lanzarotte" id="1" onclick="glowne(this)">
+            <img src="pekin.jpg" alt="pekin" id="2" onclick="glowne(this)">
+                <img src="serengeti.jpg" alt="serengeti" id="3" onclick="glowne(this)">
+                    <img src="wenecja.jpg" alt="wenecja" id="4" onclick="glowne(this)">
+                        <img src="tajlandia.jpg" alt="tajlandia" id="5" onclick="glowne(this)">
+
+    <script>
+        function glowne($source) {
+            document.getElementById('0').src = $source.src
+        }
+        
+    </script>
+    </section>
+
+
+    <section id="prawy">
+        <h3>Obrazy w naszej galerii</h3>
+
+        <table>
+            <tr>
+                <td>Europa</td>
+                <td>Azja</td>
+                <td>Afryka</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+        <p> Polub nas <img src="icon-off.png" id="if_liked" onclick="like_change()"> </p> 
+            
+             
+        <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+
+
+        <script>
+            function like_change() {
+                var like = document.getElementById('if_liked');
+
+                if (like.src.includes("icon-off.png")) {
+                    like.src = "icon-on.png";
+                } else {
+                    like.src = "icon-off.png";
+                }
+            }
+
+        </script>
+    </section>
+
+
+    <footer>
+        Autor: 11223344556
+    </footer>
+
+</body>
+</html>

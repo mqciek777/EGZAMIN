@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+
+<body>
+    <section id="lewy">
+        <h1>Konfigurator stylu</h1>
+
+        <p>Podaj kolor tła</p>
+            <input type="button" id="indigo" value="Indigo" onclick="prawy.style.background='indigo'">
+            <input type="button" id="steelblue" value="SteelBlue" onclick="prawy.style.background='steelblue'">
+            <input type="button" id="olive" value="Olive" onclick="prawy.style.background='olive'">
+
+        <p>Podaj kolor czcionki</p>
+            <select id="kolor_czcionki" onchange="zmiana_koloru(value)">
+                <option value="white">White</option>
+                <option value="tan">Tan</option>
+                <option value="bisque">Bisque</option>
+                <option value="plum">Plum</option>
+            </select>
+
+        <p>Podaj rozmiar czcionki w procentach, np 200%</p>
+            <input type="text" id="rozmiar_czcionki" value="100%" onchange="zmiana_rozmiaru_czcionki(value)">
+
+        <p>Czy rysunek ma mieć ramkę?</p>
+            <input type="checkbox" id="checkbox_ramka" onchange="czy_obramowanie()" checked> Rysuj ramkę
+        
+        <p>Jaki jest typ punktora listy?</p>
+            <input type="radio" name="wybor" onchange="styl_listy('disc')" checked> Dysk <br>
+            <input type="radio" name="wybor" onchange="styl_listy('square')"> Kwadrat <br>
+            <input type="radio" name="wybor" onchange="styl_listy('circle')"> Okrąg
+    </section>
+
+
+    <section id="prawy">
+        <img src="gibraltar.jpg" id="obrazek" alt="półwysep Gibraltar">
+
+        <ul id="lista" onclick="styl_listy()" >
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+
+        <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+    
+        <script>
+            function zmiana_koloru(kolor) {
+                document.getElementById("prawy").style.color = kolor;
+            }
+
+            function zmiana_rozmiaru_czcionki(rozmiar) {
+                document.getElementById("prawy").style.fontSize = rozmiar;
+            }
+
+            function czy_obramowanie() {
+                if (checkbox_ramka.checked) {
+                    document.getElementById("obrazek").style.border = "solid 1px white";
+                }
+                else {
+                    document.getElementById("obrazek").style.border = "none";
+                }
+            }
+
+            function styl_listy(value) {
+                document.getElementById("lista").style.listStyleType = value;
+            }
+        </script>
+    
+    
+    </section>
+
+
+    <footer>
+        Autor: 11223344555
+    </footer>
+</body>
+</html>

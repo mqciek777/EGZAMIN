@@ -1,0 +1,50 @@
+body {
+    font-family: Helvetica;
+}
+
+header, footer {
+    background: rgb(70, 130, 180);
+    color: white;
+    height: 30px;
+    text-align: center;
+    clear: both;
+}
+
+main {
+    background: rgb(176, 196, 222);
+    padding: 50px;
+    text-align: center;
+    clear: both;
+}
+
+#lewy {
+    background: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 80%;
+    float: left;
+}
+
+#prawy {
+    background: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 20%;
+    float: left;
+}
+
+main img {
+    padding: 3px;
+    border: dashed 1px blue;
+    border-radius: 10px;
+}
+
+#lewy img {
+    height: 40%;
+    float: left;
+}
+
+
+#lewy img:hover {
+    border: solid 1px white;
+}
