@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+}
+
+#header_1 {
+    background: #483D8B;
+    height: 150px;
+    width: 30%;
+    float: left;
+}
+
+#header_2 {
+    background: #483D8B;
+    color: white;
+    height: 150px;
+    width: 70%;
+    float: left;
+}
+
+#blok {
+    background: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    padding: 1px solid;
+    float: left;
+}
+
+footer {
+    background: #483D8B;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+
+h5 {
+    text-align: center;
+}
